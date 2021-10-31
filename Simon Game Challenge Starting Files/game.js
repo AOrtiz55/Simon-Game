@@ -1,22 +1,20 @@
 var buttonColors = ["red", "blue", "green", "yellow"];
 var gamePattern = [];
-var userClickedPattern = [];
+
 
 
 var started = false;
 var level = 0;
 
-$(document).ready(function(){
-  $("html").on("taphold",function(){
-    if (!started) {
-      $("#level-title").text("Level " + level);
-      nextSequence();
-      started = true;
-    }
-  });
-
-
+$(".play").click(function() {
+  if (!started) {
+    $("#level-title").text("Level " + level);
+    nextSequence();
+    started = true;
+  }
 });
+
+
 $(document).keypress(function() {
   if (!started) {
     $("#level-title").text("Level " + level);
@@ -51,7 +49,7 @@ function checkAnswer(currentLevel) {
   } else {
     playSound("wrong");
     $("body").addClass("game-over");
-    $("#level-title").text("Game Over, Press Any Key to Restart");
+    $("#level-title").text("Game Over, Press Any Key or Play to Restart");
 
     setTimeout(function() {
       $("body").removeClass("game-over");
