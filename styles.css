@@ -9,6 +9,12 @@ body {
   margin:  5%;
   color: #FEF2BF;
 }
+.play{
+  font-size: 20px;
+  font-weight: bolder;
+  background-color: white;
+
+}
 
 .container {
   display: block;
