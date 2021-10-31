@@ -7,7 +7,7 @@ var started = false;
 var level = 0;
 
 $(document).ready(function(){
-  $("html").on("click",function(){
+  $("html").on("taphold",function(){
     if (!started) {
       $("#level-title").text("Level " + level);
       nextSequence();
